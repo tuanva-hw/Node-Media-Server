@@ -23,6 +23,7 @@ const context = require('./node_core_ctx');
 const streamsRoute = require('./api/routes/streams');
 const serverRoute = require('./api/routes/server');
 const relayRoute = require('./api/routes/relay');
+const testRoute = require('./api/routes/test');
 
 class NodeHttpServer {
   constructor(config) {
@@ -61,6 +62,7 @@ class NodeHttpServer {
       app.use('/api/streams', streamsRoute(context));
       app.use('/api/server', serverRoute(context));
       app.use('/api/relay', relayRoute(context));
+      app.use('/api/test', testRoute(context));
     }
 
     app.use(Express.static(path.join(__dirname + '/public')));
