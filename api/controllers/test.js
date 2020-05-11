@@ -1,5 +1,6 @@
 const { exec } = require("child_process");
-const cmd = "ffmpeg -re -i /home/datdq/Documents/streaming_app/resourceVideos/30s.mp4 -c:v libx264 -preset superfast -tune zerolatency -c:a aac -ar 44100 -f flv rtmp://localhost/live/STREAM_NAME";
+// const cmd = "ffmpeg -re -i /home/datdq/Documents/streaming_app/resourceVideos/30s.mp4 -c:v libx264 -preset superfast -tune zerolatency -c:a aac -ar 44100 -f flv rtmp://localhost/live/STREAM_NAME";
+const cmd = "ffmpeg -re -i rtmp://rtmp.mstone.online/live -c:v libx264 -preset superfast -tune zerolatency -c:a aac -ar 44100 -f flv rtmp://localhost/live/STREAM_NAME";
 
 function start(req, res, next) {
   exec(cmd, (err, stdout, stderr) => {
