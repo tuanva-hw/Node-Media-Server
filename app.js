@@ -31,16 +31,16 @@ const config = {
         mode: 'push',
         edge: 'rtmp://127.0.0.1/hls_1080p',
       },
-      {
-        app: 'stream',
-        mode: 'push',
-        edge: 'rtmp://127.0.0.1/hls_720p',
-      },
-      {
-        app: 'stream',
-        mode: 'push',
-        edge: 'rtmp://127.0.0.1/hls_480p',
-      },
+      // {
+      //   app: 'stream',
+      //   mode: 'push',
+      //   edge: 'rtmp://127.0.0.1/hls_720p',
+      // },
+      // {
+      //   app: 'stream',
+      //   mode: 'push',
+      //   edge: 'rtmp://127.0.0.1/hls_480p',
+      // },
       {
         app: 'stream',
         mode: 'push',

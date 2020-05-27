@@ -12,12 +12,12 @@ const template = name => {
 
 module.exports = name => {
   return new Promise((resolve, reject) => {
-    mkdirp(`${process.env.MEDIA_ROOT}/live`, dirErr => {
+    mkdirp(`${process.env.MEDIA_ROOT}/stream`, dirErr => {
       if (dirErr) {
         reject(dirErr.message)
         return
       }
-      const playlist = `${process.env.MEDIA_ROOT}/live/${name}.m3u8`
+      const playlist = `${process.env.MEDIA_ROOT}/stream/${name}.m3u8`
       fs.open(playlist, 'w', (err, fd) => {
         if (err) {
           reject(err.message)
